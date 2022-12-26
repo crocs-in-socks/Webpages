@@ -4,3 +4,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.navbar
+{
+    display: flex;
+    background-color: rgb(75, 75, 75);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+.navbar a
+{
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover
+{
+    background-color: whitesmoke;
+    color: black;
+}
