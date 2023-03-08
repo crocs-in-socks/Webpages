@@ -1,0 +1,19 @@
+Thought process behind The tooDoo List
+
+What I want to achieve:
+- Display the tasks as cards
+
+- When the site first loads up, I want to see the header and the first card to which I can add a task
+
+- At the right end of the card, I'm imagining a + symbol, which when clicked will add a new task below 
+the current one
+
+- There should be some sort of checkbox, which when checked, dulls out the checked task and runs a line through the text in the task
+
+- We should sort the tasks in order of completion, that means, completed tasks will be on the bottom of the list adn will no longer have the + symbol to add a new task under them.
+
+So, how do I get started?
+
+- Firstly, the task list is a ul, with li elements within it
+- As I want to start with some empty task when the site loads, I should add the first element of the task manually in the HTML. The tasks that follow will be added dynamically
+

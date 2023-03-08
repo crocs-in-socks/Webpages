@@ -6,16 +6,53 @@
     font-family: 'Exo', sans-serif;
 }
 
+body{
+    background-color: #222222;
+}
+
 .header{
     display: flex;
     justify-content: center;
     padding: 40px;
+    color: rgb(255, 255, 255);
 }
 
 .taskCard{
-    display: block;
+    display: flex;
     margin: auto;
     width: 70%;
     align-content: flex-start;
     padding: 20px;
+
+    background-color: #faace8;
+    border-radius: 5px;
+
+}
+
+.taskText{
+    display: inline;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    margin: 5px;
+    padding: 5px;
+    color: #222222;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.checkBox{
+    margin: 10px 0px;
+    height: 25px;
+    width: 25px;
+    background-color: #faace8;
+    border: #222222;
+    opacity: 0.75;
+    border-style: solid;
+    border-radius: 2px;
 }
