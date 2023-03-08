@@ -1,0 +1,21 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.taskCard{
+    display: block;
+    margin: auto;
+    width: 70%;
+    align-content: flex-start;
+    padding: 20px;
+}
