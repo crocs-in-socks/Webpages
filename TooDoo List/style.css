@@ -19,14 +19,26 @@ body{
 
 .taskCard{
     display: flex;
+    align-items: center;
+    justify-content: center;
+
     margin: auto;
-    width: 70%;
-    align-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 20px;
+    width: 70%;
 
     background-color: #faace8;
     border-radius: 5px;
+    border-style: solid;
+    border-color: #faace8;
+}
 
+.checked{
+    background-color: grey;
+    border-style: solid;
+    border-color: #222222;
+    /* text-decoration: line-through; */
 }
 
 .taskText{
@@ -50,9 +62,19 @@ input[type="checkbox"]{
     margin: 10px 0px;
     height: 25px;
     width: 25px;
-    background-color: #faace8;
+    background-color: inherit;
     border: #222222;
     opacity: 0.75;
     border-style: solid;
     border-radius: 2px;
+}
+
+.addTask{
+    display: flex;
+    align-items: right;
+    color: #222222;
+    opacity: 0.75;
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
 }

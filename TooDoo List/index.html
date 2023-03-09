@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TooDoo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-
+    
     <!-- imported fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +15,16 @@
 </head>
 <body>
     <h1 class="header">The tooDoo List</h2>
-    <ul>
+    <ul class="fullList">
         <li class="taskCard">
-            <input type="checkbox" class="defaultCheckBox">
+            <!-- <input type="checkbox" class="defaultCheckBox"> -->
             <div class="checkBox"></div>
             <input type="text" class="taskText" placeholder="Enter a task here">
+            <span class="addTask">
+                &plus;
+            </span>
         </li>
     </ul>
+    <script src="script.js"></script>
 </body>
 </html>
