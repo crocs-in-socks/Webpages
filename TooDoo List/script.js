@@ -1,6 +1,3 @@
-let taskList = document.getElementsByClassName('taskCard');
-let completedTaskList = document.getElementsByClassName('checked');
-
 let fullList = document.querySelector('ul')
 fullList.addEventListener('click', clickedTask);
 
@@ -9,9 +6,25 @@ function clickedTask(ev)
     if(ev.target.tagName === 'LI')
     {
         ev.target.classList.toggle('checked');
+        // let text = ev.target.;
+        console.log(text);
     }
     else if(ev.target.tagName === 'SPAN')
         addTask(ev);
+    else if(ev.target.className === 'taskText')
+        addEventListener('keypress', entered);
+}
+
+function entered(ev)
+{
+    if(ev.key == 'Enter')
+    {
+        let inputField = ev.target;
+        let textNode = document.createElement("div");
+        textNode.setAttribute("class", "taskText");
+        textNode.innerHTML = inputField.value;
+        inputField.parentElement.replaceChild(textNode, inputField);
+    }
 }
 
 function addTask(ev)
