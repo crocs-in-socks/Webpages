@@ -32,24 +32,55 @@ body{
     border-radius: 5px;
     border-style: solid;
     border-color: #faace8;
+
+    color: #222222;
+    
+    animation: dropDown 500ms;
+}
+
+@keyframes dropDown{
+    0%{
+        transform: scaleY(0);
+    }
+    80%{
+        transform: scaleY(1.1);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes closeUp{
+    0%{
+        transform: scaleY(1);
+    }
+    20%{
+        transform: scaleY(1.1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
 }
 
 .checked{
     background-color: grey;
     border-style: solid;
-    border-color: #222222;
-    /* text-decoration: line-through; */
+    border-color: grey;
+    /* color:rgb(255, 255, 255);
+    text-decoration: line-through;
+    text-decoration-style:solid; */
+    font-weight: 900;
 }
 
 .taskText{
-    display: inline;
+    /* display: inline; */
     width: 100%;
     background-color: inherit;
     border: none;
     outline: none;
     margin: 5px;
     padding: 5px;
-    color: #222222;
+    color: inherit;
     font-size: 1em;
     font-weight: 900;
 }
@@ -69,6 +100,23 @@ input[type="checkbox"]{
     border-radius: 2px;
 }
 
+.checkMark{
+    /* border: none; */
+    /* position: absolute; */
+    /* border-color: #fff; */
+
+    padding-bottom: 5px;
+
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+
+    margin: 0px 6px 5px 6px;
+
+    transform: rotate(45deg);
+    height: 25px;
+    width: 12px;
+}
+
 .addTask{
     display: flex;
     align-items: right;
@@ -77,4 +125,18 @@ input[type="checkbox"]{
     font-size: 2em;
     font-weight: 700;
     cursor: pointer;
+
+    margin: 0px 5px;
+}
+
+.delTask{
+    display: flex;
+    align-items: right;
+    color: #222222;
+    opacity: 0.75;
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+
+    margin: 0px 5px;
 }

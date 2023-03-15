@@ -6,11 +6,19 @@ function clickedTask(ev)
     if(ev.target.tagName === 'LI')
     {
         ev.target.classList.toggle('checked');
-        // let text = ev.target.;
-        console.log(text);
+        let checkmark = ev.target.getElementsByTagName('div')[0];
+        checkmark.classList.toggle('checkMark')
     }
-    else if(ev.target.tagName === 'SPAN')
+    else if(ev.target.tagName === 'DIV')
+    {
+        ev.target.parentElement.classList.toggle('checked');
+        let checkmark = ev.target.parentElement.getElementsByTagName('div')[0];
+        checkmark.classList.toggle('checkMark')
+    }
+    else if(ev.target.className === 'addTask')
         addTask(ev);
+    else if(ev.target.className === 'delTask')
+        delTask(ev);
     else if(ev.target.className === 'taskText')
         addEventListener('keypress', entered);
 }
@@ -24,6 +32,19 @@ function entered(ev)
         textNode.setAttribute("class", "taskText");
         textNode.innerHTML = inputField.value;
         inputField.parentElement.replaceChild(textNode, inputField);
+    }
+}
+
+function delTask(ev)
+{
+    let task = ev.target.parentElement;
+    let taskList = task.parentElement;
+    if(taskList.children.length > 1)
+    {
+        task.style.animation = "closeUp 500ms";
+        setTimeout(()=>{
+            task.remove();
+        }, 450);
     }
 }
 
@@ -41,15 +62,20 @@ function addTask(ev)
     let newTextInput = document.createElement("input");
     newTextInput.setAttribute("type", "text");
     newTextInput.setAttribute("class", "taskText");
-    newTextInput.setAttribute("placeholder", "Enter task here");
+    newTextInput.setAttribute("placeholder", "Enter a task here");
 
-    let newBtn = document.createElement("span");
-    newBtn.setAttribute("class", "addTask");
-    newBtn.innerHTML = "&plus;";
+    let newAddBtn = document.createElement("span");
+    newAddBtn.setAttribute("class", "addTask");
+    newAddBtn.innerHTML = "&plus;";
 
+    let newDelBtn = document.createElement("span");
+    newDelBtn.setAttribute("class", "delTask");
+    newDelBtn.innerHTML = "&times;"
+    
     newTask.appendChild(newCheckBox);
     newTask.appendChild(newTextInput);
-    newTask.appendChild(newBtn)
+    newTask.appendChild(newAddBtn);
+    newTask.appendChild(newDelBtn);
 
-    currentTask.parentElement.insertBefore(newTask, currentTask);
+    currentTask.parentElement.append(newTask);
 }
