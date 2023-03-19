@@ -77,5 +77,6 @@ function addTask(ev)
     newTask.appendChild(newAddBtn);
     newTask.appendChild(newDelBtn);
 
-    currentTask.parentElement.append(newTask);
+    currentTask.insertAdjacentHTML('afterend', newTask.outerHTML); // Appends the new task right after the task that was clicked on
+    console.log(newTask);
 }
