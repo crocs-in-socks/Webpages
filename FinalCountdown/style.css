@@ -1,0 +1,58 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo';
+}
+
+body{
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    height: 100vh;
+
+    background-color: #231F20;
+}
+
+.timerBox{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 80vh;
+    background-color: #BB4430;
+    color: #EFE6DD;
+    border-radius: 10px;
+    font-size: 4rem;
+}
+
+.digitBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+
+    border-radius: 10px;
+    color: #EFE6DD;
+    background-color: #AA3320;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+}
+
+.inp{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #EFE6DD;
+    background-color: #AA3320;
+    border: none;
+    outline: none;
+    height: 15vh;
+    width: 15vh;
+    font-size: 10vh;
+}
